@@ -43,5 +43,25 @@ app.get('/courses', (req, res) => {
     )
 })
 
+app.get('/skills', (req, res) => {
+    connection.query(
+        'select * from courses ',
+        function(err, results, fields) {
+            console.log(results)
+            res.send(results)
+        }
+    )
+})
+
+app.get('/carrers', (req, res) => {
+    connection.query(
+        'select * from courses ',
+        function(err, results, fields) {
+            console.log(results)
+            res.send(results)
+        }
+    )
+})
+
 app.listen(process.env.PORT || 3000)
     //connection.end()
