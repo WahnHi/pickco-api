@@ -33,5 +33,15 @@ app.get('/login', (req, res) => {
     )
 })
 
+app.get('/courses', (req, res) => {
+    connection.query(
+        'select * from courses ',
+        function(err, results, fields) {
+            console.log(results)
+            res.send(results)
+        }
+    )
+})
+
 app.listen(process.env.PORT || 3000)
     //connection.end()
