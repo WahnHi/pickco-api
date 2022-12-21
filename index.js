@@ -45,7 +45,7 @@ app.get('/courses', (req, res) => {
 
 app.get('/skills', (req, res) => {
     connection.query(
-        'select * from courses ',
+        'select * from skills ',
         function(err, results, fields) {
             console.log(results)
             res.send(results)
@@ -55,7 +55,7 @@ app.get('/skills', (req, res) => {
 
 app.get('/carrers', (req, res) => {
     connection.query(
-        'select * from courses ',
+        'select * from carrers ',
         function(err, results, fields) {
             console.log(results)
             res.send(results)
